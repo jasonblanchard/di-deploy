@@ -7,7 +7,7 @@ resources:
 - db.yaml
 images:
 - name: jasonblanchard/di-velocity
-  newTag: e8655339c88b3d53fc26157552bb4ea94e466147 # {"$ref":"#/definitions/io.k8s.cli.setters.tag"}
+  newTag: b5ce19eb28f1ba832d75ecb1789fcdd91c3b5af8 # {"$ref":"#/definitions/io.k8s.cli.setters.tag"}
 configMapGenerator:
 - literals:
   - NATS_URL=nats://nats:4222

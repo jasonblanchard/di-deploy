@@ -5,7 +5,7 @@ metadata:
 upstream:
     type: git
     git:
-        commit: e8655339c88b3d53fc26157552bb4ea94e466147
+        commit: b5ce19eb28f1ba832d75ecb1789fcdd91c3b5af8
         repo: https://github.com/jasonblanchard/di-velocity
         directory: deploy/k8s
         ref: master
