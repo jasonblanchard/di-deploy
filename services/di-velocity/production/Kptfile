@@ -10,4 +10,4 @@ openAPI:
       x-k8s-cli:
         setter:
           name: tag
-          value: "b5ce19eb28f1ba832d75ecb1789fcdd91c3b5af8"
+          value: "c5008cbea5cb58e4a3ebfe92112ae313f557e051"
