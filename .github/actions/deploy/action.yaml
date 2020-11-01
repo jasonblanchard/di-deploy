@@ -14,6 +14,7 @@ runs:
   using: "composite"
   steps:
     - run: pwd
+      shell: bash
     - name: install kustomize
       run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
       shell: bash
