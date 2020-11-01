@@ -5,7 +5,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/jasonblanchard/di-public-web
+    repoURL: https://github.com/jasonblanchard/di-deploy
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
