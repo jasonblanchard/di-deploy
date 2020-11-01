@@ -1,0 +1,9 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: public-web
+spec:
+  source:
+    path: servicesV2/public-web/production
+  destination:
+    namespace: di
