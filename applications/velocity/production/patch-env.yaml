@@ -1,0 +1,9 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: velocity
+spec:
+  source:
+    path: servicesV2/velocity/production
+  destination:
+    namespace: di
