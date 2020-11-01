@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: authn
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/jasonblanchard/di-authn
+  destination:
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated: {}
