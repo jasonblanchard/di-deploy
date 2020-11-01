@@ -1,0 +1,24 @@
+name: Request deploy
+on:
+  workflow_dispatch:
+    inputs:
+      service:
+        description: 'Name of service to deploy'
+        required: true
+        default: ''
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+      version:
+        description: 'Version to deploy (git SHA)'
+        required: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        git config --global user.name 'Jason Blanchard'
+        git config --global user.email 'jas.blanchard@gmail.com'
+        git commit -am "deploying ${{ github.event.inputs.service }} ${{ github.event.inputs.environment }} to version ${{ github.event.inputs.version }}"
+        git push origin main
