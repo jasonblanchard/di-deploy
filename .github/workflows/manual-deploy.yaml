@@ -18,7 +18,7 @@ jobs:
     name: Deploy
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/deploy
+    - uses: ./.github/actions/deploy
       with:
         service: github.event.inputs.service
         environment: github.event.inputs.environment
