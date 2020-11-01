@@ -18,5 +18,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: deploy
-      - run: |
+        run: |
           curl -XPOST -u "${{ secrets.DEPLOY_USERNAME}}:${{secrets.DEPLOY_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/jasonblanchard/di-deploy/dispatches --data '{"event_type": "deploy", "client_payload": { "version": "${{ github.event.inputs.version }}", "service": "${{ github.event.inputs.service }}", "environment": "${{ github.event.inputs.environment }}"} }'
