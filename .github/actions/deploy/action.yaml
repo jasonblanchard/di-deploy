@@ -1,4 +1,4 @@
-name: 'Deply'
+name: 'Deploy'
 inputs:
   service:
     description: 'Name of service to deploy'
@@ -13,12 +13,15 @@ inputs:
 runs:
   using: "composite"
     steps:
-      - uses: actions/checkout@v2
+      # - uses: actions/checkout@v2
       - name: install kustomize
         run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+        shell: bash
       - name: update service version
         run: kustomize cfg set services/${{ inputs.service }}/${{ inputs.environment }} version ${{ inputs.version }}
+        shell: bash
       - name: commit changes
+        shell: bash
         run: |
           git config --global user.name 'Jason Blanchard'
           git config --global user.email 'jas.blanchard@gmail.com'
