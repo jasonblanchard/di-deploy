@@ -1,0 +1,9 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: gql-edge
+spec:
+  source:
+    path: servicesV2/gql-edge/production
+  destination:
+    namespace: di
