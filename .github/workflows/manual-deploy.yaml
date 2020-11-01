@@ -12,11 +12,14 @@ on:
       version:
         description: 'Version to deploy (git SHA)'
         required: true
-
 jobs:
-  dispatch:
+  deploy:
     runs-on: ubuntu-latest
+    name: Deploy
     steps:
-      - name: Manual deploy
-        run: |
-          curl -XPOST -u "${{ secrets.DEPLOY_USERNAME}}:${{secrets.DEPLOY_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/jasonblanchard/di-deploy/dispatches --data '{"event_type": "deploy", "client_payload": { "version": "${{ github.event.inputs.version }}", "service": "${{ github.event.inputs.service }}", "environment": "${{ github.event.inputs.environment }}"} }'
+    - uses: actions/checkout@v2
+    - uses: actions/deploy
+      with:
+        service: github.event.inputs.service
+        environment: github.event.inputs.environment
+        version: github.event.inputs.version

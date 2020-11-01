@@ -1,0 +1,26 @@
+name: 'Deply'
+inputs:
+  service:
+    description: 'Name of service to deploy'
+    required: true
+    default: ''
+  environment:
+    description: 'Environment to deploy to'
+    required: true
+  version:
+    description: 'Version to deploy (git SHA)'
+    required: true
+runs:
+  using: "composite"
+    steps:
+      - uses: actions/checkout@v2
+      - name: install kustomize
+        run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+      - name: update service version
+        run: kustomize cfg set services/${{ inputs.service }}/${{ inputs.environment }} version ${{ inputs.version }}
+      - name: commit changes
+        run: |
+          git config --global user.name 'Jason Blanchard'
+          git config --global user.email 'jas.blanchard@gmail.com'
+          git commit -am "deploying ${{ inputs.service }} ${{ inputs.environment }} to version ${{ inputs.version }}"
+          git push origin main
