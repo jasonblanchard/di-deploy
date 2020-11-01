@@ -4,6 +4,6 @@ metadata:
   name: graphiql
 spec:
   source:
-    path: servicesV2/graphiql/production
+    path: services/graphiql/production
   destination:
     namespace: di

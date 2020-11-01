@@ -4,6 +4,6 @@ metadata:
   name: gql-edge
 spec:
   source:
-    path: servicesV2/gql-edge/production
+    path: services/gql-edge/production
   destination:
     namespace: di

@@ -4,6 +4,6 @@ metadata:
   name: entry
 spec:
   source:
-    path: servicesV2/entry/production
+    path: services/entry/production
   destination:
     namespace: di

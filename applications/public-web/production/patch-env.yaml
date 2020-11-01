@@ -4,6 +4,6 @@ metadata:
   name: public-web
 spec:
   source:
-    path: servicesV2/public-web/production
+    path: services/public-web/production
   destination:
     namespace: di

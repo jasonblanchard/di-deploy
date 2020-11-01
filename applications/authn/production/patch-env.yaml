@@ -4,6 +4,6 @@ metadata:
   name: authn
 spec:
   source:
-    path: servicesV2/authn/production
+    path: services/authn/production
   destination:
     namespace: di

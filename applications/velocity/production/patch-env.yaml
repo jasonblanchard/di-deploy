@@ -4,6 +4,6 @@ metadata:
   name: velocity
 spec:
   source:
-    path: servicesV2/velocity/production
+    path: services/velocity/production
   destination:
     namespace: di

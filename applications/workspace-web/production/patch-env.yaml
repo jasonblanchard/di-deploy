@@ -4,6 +4,6 @@ metadata:
   name: workspace-web
 spec:
   source:
-    path: servicesV2/workspace-web/production
+    path: services/workspace-web/production
   destination:
     namespace: di
