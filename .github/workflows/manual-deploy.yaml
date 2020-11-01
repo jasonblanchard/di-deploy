@@ -14,7 +14,7 @@ on:
         required: true
 
 jobs:
-  manual-deploy:
+  dispatch:
     runs-on: ubuntu-latest
     steps:
       - name: Manual deploy
