@@ -27,4 +27,4 @@ runs:
         git config --global user.name 'Jason Blanchard'
         git config --global user.email 'jas.blanchard@gmail.com'
         git commit -am "deploying ${{ inputs.service }} ${{ inputs.environment }} to version ${{ inputs.version }}"
-        git push origin main
+        git push origin master
