@@ -1,4 +1,4 @@
-name: 'Create deploy commit'
+name: Deploy commit
 inputs:
   service:
     description: 'Name of service to deploy'
