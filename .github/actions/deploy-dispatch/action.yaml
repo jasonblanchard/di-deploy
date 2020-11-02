@@ -1,0 +1,24 @@
+name: Deploy dispatch
+inputs:
+  service:
+    description: 'Name of service to deploy'
+    required: true
+    default: ''
+  environment:
+    description: 'Environment to deploy to'
+    required: true
+  version:
+    description: 'Version to deploy (git SHA)'
+    required: true
+  username:
+    description:  "Github username"
+    required: true
+  token:
+    description: "Github token"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Create deploy dispatch
+      run: |
+        curl -XPOST -u "${{ inputs.username }}:${{ inputs.token }}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/jasonblanchard/di-deploy/dispatches --data '{"event_type": "deploy", "client_payload": { "version": "${{ inputs.version }}", "service": "${{ inputs.service }}", "environment": "${{ inputs.environment }}"} }'
