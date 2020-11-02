@@ -18,6 +18,7 @@ inputs:
     required: true
 runs:
   using: "composite"
+  shell: bash
   steps:
     - name: Create deploy dispatch
       run: |
