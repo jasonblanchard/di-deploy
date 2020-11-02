@@ -18,8 +18,8 @@ inputs:
     required: true
 runs:
   using: "composite"
-  shell: bash
   steps:
     - name: Create deploy dispatch
+      shell: bash
       run: |
         curl -XPOST -u "${{ inputs.username }}:${{ inputs.token }}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/jasonblanchard/di-deploy/dispatches --data '{"event_type": "deploy", "client_payload": { "version": "${{ inputs.version }}", "service": "${{ inputs.service }}", "environment": "${{ inputs.environment }}"} }'
