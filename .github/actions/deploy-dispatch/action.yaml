@@ -22,4 +22,4 @@ runs:
     - name: Create deploy dispatch
       shell: bash
       run: |
-        curl -XPOST -u -v "${{ inputs.username }}:${{ inputs.token }}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/jasonblanchard/di-deploy/dispatches --data '{"event_type": "deploy", "client_payload": { "version": "${{ inputs.version }}", "service": "${{ inputs.service }}", "environment": "${{ inputs.environment }}"} }'
+        curl -XPOST -v -u "${{ inputs.username }}:${{ inputs.token }}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/jasonblanchard/di-deploy/dispatches --data '{"event_type": "deploy", "client_payload": { "version": "${{ inputs.version }}", "service": "${{ inputs.service }}", "environment": "${{ inputs.environment }}"} }'
