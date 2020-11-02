@@ -1,4 +1,4 @@
-name: Dispatch Deploy
+name: Dispatch deploy
 on:
   repository_dispatch:
     types: [deploy]
