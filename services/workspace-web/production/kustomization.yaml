@@ -2,9 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: di
 bases:
-- https://github.com/jasonblanchard/di-workspace-web/deploy/k8s/production?ref=73f493f612d6aeadf176f7ecba6ec6089df64a9b # {"$openapi":"base"}
+- https://github.com/jasonblanchard/di-workspace-web/deploy/k8s/production?ref=6897028c07d7cd886616344e1db9a5d5cd2fdb99 # {"$openapi":"base"}
 images:
 - name: jasonblanchard/di-workspace-web
-  newTag: "73f493f612d6aeadf176f7ecba6ec6089df64a9b" # {"$openapi":"version"}
+  newTag: "6897028c07d7cd886616344e1db9a5d5cd2fdb99" # {"$openapi":"version"}
 commonAnnotations:
-  version: "73f493f612d6aeadf176f7ecba6ec6089df64a9b" # {"$openapi":"version"}
+  version: "6897028c07d7cd886616344e1db9a5d5cd2fdb99" # {"$openapi":"version"}
