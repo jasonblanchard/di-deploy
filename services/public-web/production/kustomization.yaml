@@ -1,6 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: di
+namespace: di-production
 bases:
 - https://github.com/jasonblanchard/di-public-web/deploy/k8s/production?ref=6b29346fe5be501f524b6783b96293edab00b93b # {"$openapi":"base"}
 images:

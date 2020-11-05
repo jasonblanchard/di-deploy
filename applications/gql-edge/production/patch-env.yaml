@@ -6,4 +6,4 @@ spec:
   source:
     path: services/gql-edge/production
   destination:
-    namespace: di
+    namespace: di-production

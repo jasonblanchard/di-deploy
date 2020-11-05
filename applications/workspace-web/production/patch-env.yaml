@@ -6,4 +6,4 @@ spec:
   source:
     path: services/workspace-web/production
   destination:
-    namespace: di
+    namespace: di-production
