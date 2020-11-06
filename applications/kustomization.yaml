@@ -8,3 +8,4 @@ resources:
   - public-web/production
   - velocity/production
   - workspace-web/production
+  - notebook/production
