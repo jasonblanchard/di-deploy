@@ -13,7 +13,7 @@ openAPI:
       x-k8s-cli:
         substitution:
           name: base
-          pattern: https://github.com/jasonblanchard/di-entry/deploy/k8s/production?ref=${version}
+          pattern: https://github.com/jasonblanchard/di-notebook/deploy/k8s/production?ref=${version}
           values:
           - marker: ${version}
             ref: '#/definitions/io.k8s.cli.setters.version'
