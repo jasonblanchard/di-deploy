@@ -2,9 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: di-production
 bases:
-- https://github.com/jasonblanchard/di-notebook/deploy/k8s/production?ref=4cda5892a970f8b531f096090956642894b93e17 # {"$openapi":"base"}
+- https://github.com/jasonblanchard/di-entry/deploy/k8s/production?ref=a8d5f93fd45f5064baaac573180c20c3b1ed943f # {"$openapi":"base"}
 images:
 - name: jasonblanchard/di-notebook
-  newTag: "4cda5892a970f8b531f096090956642894b93e17" # {"$openapi":"version"}
+  newTag: "a8d5f93fd45f5064baaac573180c20c3b1ed943f" # {"$openapi":"version"}
 commonAnnotations:
-  version: "4cda5892a970f8b531f096090956642894b93e17" # {"$openapi":"version"}
+  version: "a8d5f93fd45f5064baaac573180c20c3b1ed943f" # {"$openapi":"version"}
