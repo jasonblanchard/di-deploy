@@ -2,9 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: di-production
 bases:
-- https://github.com/jasonblanchard/di-gql-edge/deploy/k8s/production?ref=ae5f2d167566918760c43412d7f8f5e59c1e6618 # {"$openapi":"base"}
+- https://github.com/jasonblanchard/di-gql-edge/deploy/k8s/production?ref=110eb060372a14e09de90d4cce875a368ebdfc3d # {"$openapi":"base"}
 images:
 - name: jasonblanchard/di-gql-edge
-  newTag: "ae5f2d167566918760c43412d7f8f5e59c1e6618" # {"$openapi":"version"}
+  newTag: "110eb060372a14e09de90d4cce875a368ebdfc3d" # {"$openapi":"version"}
 commonAnnotations:
-  version: "ae5f2d167566918760c43412d7f8f5e59c1e6618" # {"$openapi":"version"}
+  version: "110eb060372a14e09de90d4cce875a368ebdfc3d" # {"$openapi":"version"}
