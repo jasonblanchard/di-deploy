@@ -7,7 +7,7 @@ openAPI:
       x-k8s-cli:
         setter:
           name: version
-          value: "5fbac5a8923c3ab3beb01caa51acc1b95fe47eba"
+          value: "cf1d8b71b1c8878c711164a5c2a43bbed958c334"
           isSet: true
     io.k8s.cli.substitutions.base:
       x-k8s-cli:
