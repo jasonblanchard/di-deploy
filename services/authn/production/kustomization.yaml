@@ -2,9 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: di-production
 bases:
-- https://github.com/jasonblanchard/di-authn/deploy/k8s/production?ref=5015e93d351c4d7d13939845eac10676798330b8 # {"$openapi":"base"}
+- https://github.com/jasonblanchard/di-authn/deploy/k8s/production?ref=ab88fade65090be794faa28b56ddca51a9c85bdf # {"$openapi":"base"}
 images:
 - name: jasonblanchard/di-authn
-  newTag: "5015e93d351c4d7d13939845eac10676798330b8" # {"$openapi":"version"}
+  newTag: "ab88fade65090be794faa28b56ddca51a9c85bdf" # {"$openapi":"version"}
 commonAnnotations:
-  version: "5015e93d351c4d7d13939845eac10676798330b8" # {"$openapi":"version"}
+  version: "ab88fade65090be794faa28b56ddca51a9c85bdf" # {"$openapi":"version"}
