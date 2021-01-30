@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
   - authn/production
   - public-web/production
-  - velocity/production
+  # - velocity/production
   - workspace-web/production
   - notebook/production
