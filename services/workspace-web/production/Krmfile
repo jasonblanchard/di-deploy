@@ -7,7 +7,7 @@ openAPI:
       x-k8s-cli:
         setter:
           name: version
-          value: "d36b448cedf1c980a08433ce91c98e7f1ffd37d1"
+          value: "b3828573652391cf4f4ec4e8ea3450335f609a05"
           isSet: true
     io.k8s.cli.substitutions.base:
       x-k8s-cli:
@@ -15,5 +15,5 @@ openAPI:
           name: base
           pattern: https://github.com/jasonblanchard/di-workspace-web/deploy/k8s/production?ref=${version}
           values:
-            - marker: ${version}
-              ref: '#/definitions/io.k8s.cli.setters.version'
+          - marker: ${version}
+            ref: '#/definitions/io.k8s.cli.setters.version'
